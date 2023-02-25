@@ -1,5 +1,9 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { appointments, type Appointment } from '../../store/appointments';
+	let id: string = $page.params.id;
+  let workoutId = parseInt(id);
+
 	let appointmentTitle = '';
 	let appointmentBody = '';
 	let appointmentDate = '';
@@ -112,8 +116,11 @@
 
 	<ul class="list-none">
 		{#each $appointments as appointment}
+		{#if appointment.id === workoutId}
 			<li class="border rounded-md px-4 py-2 flex justify-between items-center mb-2">
 				<div>
+					
+					
 					<p class="font-bold">{appointment.title}</p>
 					<p>{appointment.body}</p>
 					<p>
@@ -135,6 +142,7 @@
 					Edit
 				</button>
 			</li>
+			{/if}
 		{/each}
 	</ul>
 </section>

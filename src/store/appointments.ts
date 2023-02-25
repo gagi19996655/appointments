@@ -11,8 +11,8 @@ export type Appointment = {
 const initialAppointments: Appointment[] = [
   {
     id: 1,
-    title: 'Appointment 1',
-    body: 'This is the first appointment',
+    title: 'Appointment 1 ',
+    body: 'This is the first appointment for the month of March 2023 need to be done by 10:00 AM',
     date: '2023-03-01',
     time: '10:00 AM',
   },

@@ -48,6 +48,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"svelte-navigator": "^3.2.2",
 		"ts-jest": "^29.0.5",
 		"ts-node": "^10.9.1"
 	}
